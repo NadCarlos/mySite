@@ -53,9 +53,9 @@ class ProductAdmin(admin.ModelAdmin):
         low = '#FF0000'
         standard = '#FFD300'
 
-        if obj.stock < 10:
+        if obj.stock <= 10:
             code = low
-        if 10 < obj.stock < 100:
+        if 10 <= obj.stock <= 100:
             code = standard
 
         return format_html(
